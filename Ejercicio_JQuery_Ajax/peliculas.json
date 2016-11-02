@@ -1,0 +1,11 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "Titanic",
+      "director": "No se",
+      "sinopsis": "Aburrida",
+      "fecha": "2016-11-01"
+    }
+  ]
+}

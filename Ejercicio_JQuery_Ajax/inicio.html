@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY - AJAX - JSON</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/inicio.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>PELICULAS</h1>
+    <form role="form" class="form-horizontal">
+
+        <div class="form-group">
+            <label for="id" class="col-sm-2">Id: </label>
+            <input id="id" type="text" name="id" class="col-sm-4"/>
+
+            <label for="titulo" class="col-sm-2">Titulo: </label>
+            <input id="titulo" type="text" name="titulo" class="col-sm-4"/>
+        </div>
+
+        <div class="form-group">
+            <label for="director" class="col-sm-2">Director: </label>
+            <input id="director" type="text" name="director" class="col-sm-4"/>
+
+            <label for="sinopsis" class="col-sm-2">Sinopsis: </label>
+            <input id="sinopsis" type="text" name="sinopsis" class="col-sm-4"/>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha" class="col-sm-2">Fecha: </label>
+            <input id="fecha" type="date" name="fecha" class="col-sm-4"/>
+        </div>
+
+        <div class="form-group">
+            <input type="button" value="Guardar" id="boton1" class="btn btn-primary"/>
+            <input type="button" value="Modificar" id="boton2" class="btn btn-warning"/>
+            <input type="button" value="Borrar" id="boton3" class="btn btn-danger"/>
+            <input type="reset" value="Limpiar" class="btn btn-default"/>
+        </div>
+
+    </form>
+    
+    <div class="table-responsive">
+        <table id="tabla" class="table table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITULO</th>
+                    <th>DIRECTOR</th>
+                    <th>SINOPSIS</th>
+                    <th>FECHA</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
