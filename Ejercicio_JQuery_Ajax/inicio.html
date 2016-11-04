@@ -9,40 +9,40 @@
 </head>
 <body>
 <div class="container">
-    <h1>PELICULAS</h1>
-    <form role="form" class="form-horizontal">
+    <h1>MIS PELIS</h1>
+    <div class="col-xs-12">
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <label for="titulo">Titulo: </label>
+                    <input id="titulo" type="text" name="titulo"/>
+                </div>
 
-        <div class="form-group">
-            <label for="id" class="col-sm-2">Id: </label>
-            <input id="id" type="text" name="id" class="col-sm-4"/>
+                <div class="col-xs-6">
+                    <label for="director">Director: </label>
+                    <input id="director" type="text" name="director"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <label for="sinopsis">Sinopsis: </label>
+                    <input id="sinopsis" type="text" name="sinopsis"/>
+                </div>
 
-            <label for="titulo" class="col-sm-2">Titulo: </label>
-            <input id="titulo" type="text" name="titulo" class="col-sm-4"/>
-        </div>
-
-        <div class="form-group">
-            <label for="director" class="col-sm-2">Director: </label>
-            <input id="director" type="text" name="director" class="col-sm-4"/>
-
-            <label for="sinopsis" class="col-sm-2">Sinopsis: </label>
-            <input id="sinopsis" type="text" name="sinopsis" class="col-sm-4"/>
-        </div>
-
-        <div class="form-group">
-            <label for="fecha" class="col-sm-2">Fecha: </label>
-            <input id="fecha" type="date" name="fecha" class="col-sm-4"/>
-        </div>
-
-        <div class="form-group">
-            <input type="button" value="Guardar" id="boton1" class="btn btn-primary"/>
-            <input type="button" value="Modificar" id="boton2" class="btn btn-warning"/>
-            <input type="button" value="Borrar" id="boton3" class="btn btn-danger"/>
-            <input type="reset" value="Limpiar" class="btn btn-default"/>
-        </div>
-
-    </form>
-    
-    <div class="table-responsive">
+                <div class="col-xs-6">
+                    <label for="fecha">Fecha: </label>
+                    <input id="fecha" type="date" name="fecha"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-12 text-right">
+        <input type="button" value="Guardar" id="boton1" class="btn btn-success"/>
+        <input type="button" value="Modificar" id="boton2" class="btn btn-warning"/>
+        <input type="button" value="Borrar" id="boton3" class="btn btn-danger"/>
+        <input type="reset" value="Limpiar" class="btn btn-primary"/>
+    </div>
+    <div class="table-responsive col-xs-12">
         <table id="tabla" class="table table-bordered table-hover table-condensed">
             <thead>
                 <tr>

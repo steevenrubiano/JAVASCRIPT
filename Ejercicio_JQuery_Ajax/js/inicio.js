@@ -10,7 +10,6 @@ function guardarDato(){
     $.ajax({
         type:"POST",
         data:{
-            "id":$("#id").val(),
             "titulo":$("#titulo").val(),
             "director":$("#director").val(),
             "sinopsis":$("#sinopsis").val(),
@@ -35,7 +34,6 @@ function modificarDato(){
     $.ajax({
         type:"PUT",
         data:{
-            "id":$("#id").val(),
             "titulo":$("#titulo").val(),
             "director":$("#director").val(),
             "sinopsis":$("#sinopsis").val(),
@@ -66,13 +64,12 @@ function peticionFallida(){
 }
 
 function seleccionarFila(){
-    let contador = 0;
-    let arrayCeldas = new Array();
-    $(this).find('td').each(function(){ arrayCeldas[contador] = ($(this).html()); contador++;});
-    id = arrayCeldas[0];
-    $("#id").val(arrayCeldas[0]);
-    $("#titulo").val(arrayCeldas[1]);
-    $("#director").val(arrayCeldas[2]);
-    $("#sinopsis").val(arrayCeldas[3]);
-    $("#fecha").val(arrayCeldas[4]);
+    let cnt = 0;
+    let tds = new Array();
+    $(this).find('td').each(function(){ tds[cnt] = ($(this).html()); cnt++;});
+    id = tds[0];
+    $("#titulo").val(tds[1]);
+    $("#director").val(tds[2]);
+    $("#sinopsis").val(tds[3]);
+    $("#fecha").val(tds[4]);
 }
