@@ -38,15 +38,15 @@
     {
       "titulo": "Laura",
       "director": "Herrera",
-      "sinopsis": "dfdfd",
+      "sinopsis": "Martinez",
       "fecha": "1999-02-14",
       "id": 8
     },
     {
-      "titulo": "dfdf",
-      "director": "fdfd",
-      "sinopsis": "dfdf",
-      "fecha": "",
+      "titulo": "Hola",
+      "director": "Que tal",
+      "sinopsis": "Estas",
+      "fecha": "2016-11-17",
       "id": 9
     }
   ]

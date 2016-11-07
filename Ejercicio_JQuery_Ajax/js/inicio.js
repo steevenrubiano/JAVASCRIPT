@@ -4,6 +4,7 @@ function initializeEvents(){
    $("#boton1").click(guardarDato);
    $("#boton2").click(modificarDato);
    $("#boton3").click(borrarDato);
+   $("#boton4").click(limpiarForm);
 }
 //POST
 function guardarDato(){
@@ -64,12 +65,24 @@ function peticionFallida(){
 }
 
 function seleccionarFila(){
-    let cnt = 0;
-    let tds = new Array();
-    $(this).find('td').each(function(){ tds[cnt] = ($(this).html()); cnt++;});
-    id = tds[0];
-    $("#titulo").val(tds[1]);
-    $("#director").val(tds[2]);
-    $("#sinopsis").val(tds[3]);
-    $("#fecha").val(tds[4]);
+    var cnt = 0;
+    var tedes = new Array();
+    $(this).find('td').each(
+                        function(){ 
+                            tedes[cnt] = ($(this).html()); 
+                            cnt++;
+                        }
+                    );
+    id = tedes[0];
+    $("#titulo").val(tedes[1]);
+    $("#director").val(tedes[2]);
+    $("#sinopsis").val(tedes[3]);
+    $("#fecha").val(tedes[4]);
+}
+
+function limpiarForm(){
+    $("#titulo").val("");
+    $("#director").val("");
+    $("#sinopsis").val("");
+    $("#fecha").val("");
 }
