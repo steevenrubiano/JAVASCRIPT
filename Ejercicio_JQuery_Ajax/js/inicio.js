@@ -6,45 +6,6 @@ function initializeEvents(){
    $("#boton3").click(borrarDato);
    $("#boton4").click(limpiarForm);
 }
-//POST
-function guardarDato(){
-    $.ajax({
-        type:"POST",
-        data:{
-            "titulo":$("#titulo").val(),
-            "director":$("#director").val(),
-            "sinopsis":$("#sinopsis").val(),
-            "fecha":$("#fecha").val()
-        },
-        dataType:"json",
-        url:"http://localhost:3000/peliculas"
-    }).done(mostrarDato).fail(peticionFallida);
-}
-
-//DELETE
-function borrarDato(){
-    $.ajax({
-       type:"DELETE",
-       dataType:"json",
-       url:"http://localhost:3000/peliculas/" + id
-   }).done(mostrarDato).fail(peticionFallida);
-}
-
-//PUT
-function modificarDato(){
-    $.ajax({
-        type:"PUT",
-        data:{
-            "titulo":$("#titulo").val(),
-            "director":$("#director").val(),
-            "sinopsis":$("#sinopsis").val(),
-            "fecha":$("#fecha").val()
-        },
-        dataType:"json",
-        url:"http://localhost:3000/peliculas/" + id
-    }).done(mostrarDato).fail(peticionFallida);
-}
-
 //GET
 function mostrarDato(){
     $.ajax({
@@ -63,7 +24,43 @@ function peticionCompletada(data){
 function peticionFallida(){
     alert("Error al procesar la peticion");
 }
-
+//POST
+function guardarDato(){
+    $.ajax({
+        type:"POST",
+        data:{
+            "titulo":$("#titulo").val(),
+            "director":$("#director").val(),
+            "sinopsis":$("#sinopsis").val(),
+            "fecha":$("#fecha").val()
+        },
+        dataType:"json",
+        url:"http://localhost:3000/peliculas"
+    }).done(mostrarDato).fail(peticionFallida);
+}
+//PUT
+function modificarDato(){
+    $.ajax({
+        type:"PUT",
+        data:{
+            "titulo":$("#titulo").val(),
+            "director":$("#director").val(),
+            "sinopsis":$("#sinopsis").val(),
+            "fecha":$("#fecha").val()
+        },
+        dataType:"json",
+        url:"http://localhost:3000/peliculas/" + id
+    }).done(mostrarDato).fail(peticionFallida);
+}
+//DELETE
+function borrarDato(){
+    $.ajax({
+       type:"DELETE",
+       dataType:"json",
+       url:"http://localhost:3000/peliculas/" + id
+   }).done(mostrarDato).fail(peticionFallida);
+}
+//FUNCIONES AUXILIARES
 function seleccionarFila(){
     var cnt = 0;
     var tedes = new Array();
@@ -79,7 +76,6 @@ function seleccionarFila(){
     $("#sinopsis").val(tedes[3]);
     $("#fecha").val(tedes[4]);
 }
-
 function limpiarForm(){
     $("#titulo").val("");
     $("#director").val("");
